@@ -20,4 +20,7 @@ function onListening() {
 	console.log(`Server is running`)
 }
 
+const sio = require('./components/socketioWrapper');
+const sioServerWrapper = sio( "wss://ws-feed.gdax.com")
+
 module.exports = server;
